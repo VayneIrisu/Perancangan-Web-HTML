@@ -1,0 +1,18 @@
+/* PC/Laptop */
+@media screen and (max-width: 1280px){
+	#subheader p{margin-left: 10px;}
+	#subheader a{margin-right: 10px;}
+}
+/* Tablet */
+@media screen and (max-width: 1024px){
+	
+}
+/* Handphone/Andro */
+@media screen and (max-width: 768px){
+	
+}
+/* Small Device */
+@media screen and (max-width: 480px){
+	#subheader p{display: none;}
+	#subheader{ padding-bottom: 10px; }
+}
