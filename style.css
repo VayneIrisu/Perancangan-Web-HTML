@@ -59,6 +59,52 @@
 	font-size: 70px;
 	color: white;
 }
+/* Register */
+
+.form{
+	position: fixed;
+	top: 5%;
+	left: 30%;
+	width: 35%;
+	height: 90%;
+	background-color: #F6C6C6;
+	border-radius: 6px;
+	text-align: center;
+}
+.registeratas{
+	font-family: 'Lucida Sans' , 'Lucida Sans Regular' , 'Lucida Grande';
+	padding: 30px 0 30px 0;
+	background-color: rgb(27,26,26);
+	font-size: 30px;
+	text-align: center;
+	color: white;
+	border-radius: 6px 6px 0 0;
+	margin-bottom: 50px;
+}
+.isiregister input{
+	width: 300px;
+	height: 35px;
+	margin-bottom: 5px;
+	padding-left: 20px;
+	border-radius: 5px;
+	border:none;
+	background-color: white;
+}
+.agree{
+	margin-top: 45px;
+	margin-left: -130px;
+}
+.register{
+	margin-top: 10px;
+	margin-bottom: 15px;
+	width: 370px;
+	height: 50px;
+	background-color: black;
+	border:none;
+	border-radius: 5px;
+	color:white;
+	font-size: 18px;
+}
 
 /* Home */
 
@@ -147,7 +193,7 @@
 /* User Menu Styling */
 
 #user-menu{
-	width: 300px;
+	width: 320px;
 	float: right;
 	margin-top: 30px;
 }
@@ -159,7 +205,7 @@
 	width: 135px;
 	text-align: center;
 	list-style: none;
-	font-size: 25px;
+	font-size: 21px;
 	border-left: 1px solid black;
 }
 #user-menu li:hover{
