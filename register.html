@@ -7,20 +7,20 @@
 	<!--<![endif]-->
 </head>
 <body background="images/kacamata.jpg" background-size="cover">
-	<form class="form" name="form" onsubmit="validation()">
+	<form class="form" name="form" onsubmit="validation();">
 		<div class="registeratas">User Registration</div>
 		<div class="isiregister">
-			<input type="text" placeholder="First Name">
-			<input type="text" placeholder="Last Name">
-			<input type="text" placeholder="Email">
-			<input type="text" placeholder="Address">
-			<input type="number" placeholder="Phone Number">
-			<input type="password" placeholder="Password">
-			<input type="password" placeholder="Confirm Password">
+			<input type="text" placeholder="First Name" required>
+			<input type="text" placeholder="Last Name" required>
+			<input type="text" placeholder="Email" required>
+			<input type="text" placeholder="Address" required>
+			<input type="number" placeholder="Phone Number" required>
+			<input type="password" placeholder="Password" required>
+			<input type="password" placeholder="Confirm Password" required>
 		</div>
 		<input type="checkbox" class="agree" > Saya Setuju 
 		<br>
-		<button class="register" > REGISTER </button> 
+		<button class="register" type="submit" onclick="daftarakun();"> REGISTER </button> 
 		<br>
 		<a href="login.html" class="akun" > Already have an account ?</a>
 	</form>

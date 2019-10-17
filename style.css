@@ -6,21 +6,49 @@
 	padding: 10px;
 	font: italic;
 }
-
+/* Login */
+.teks-h1{
+	color: black;
+	margin-top: 90px;
+	padding-bottom: 20px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 .login-box{
 	width: 280px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	color: white;
+	color: black;
+	font-family: sans-serif;
+	text-align: left;
+	font-weight: 500;
 }
-.login-box h1{
-	float: left;
-	font-size: 42px;
-	border-bottom: 8px solid #964B00;
-	margin-bottom: 50px;
-	padding: 13px 0;
+.form_login{
+	box-sizing : border-box;
+	width: 100%;
+	padding: 10px;
+	font-size: 11pt;
+	margin-bottom: 20px;
+}
+.tombol_login{
+	background: #F6C6C6;
+	color: black;
+	font-size: 11pt;
+	width: 100%;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 20px;
+}
+.form{
+	position: fixed;
+	top: 5%;
+	left: 30%;
+	width: 35%;
+	height: 90%;
+	background-color: #F6C6C6;
+	border-radius: 6px;
+	text-align: center;
 }
 .textbox{
 	width: 90%;
@@ -142,7 +170,7 @@
 	height: 100px;
 	background: #FFB6C1;
 	float: left;
-	margin-top: -15px;
+	margin-top: -12px;
 }
 #logo{
 	width: 250px;
@@ -246,7 +274,8 @@ nav a:hover{
 #slider img{
 	width: 1503px;
 	height: 700px;
-	margin-left: -40px;
+	margin-left: -20px;
+	margin-top: 40px;
 }
 
 /* Category Styling */
