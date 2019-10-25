@@ -373,3 +373,80 @@ nav a:hover{
 	color: #FF1493;
 	text-decoration: underline;
 }
+/*woman glasses*/
+.body-list{
+    width: 2000px;
+    margin: 35px auto;
+    background-color: #fff;
+	padding: 20px;
+}
+.daftar-produk{
+    border: 1px solid #fff;
+    padding: 10px;
+    float: left;
+    width: 200px;
+    margin: 5px;
+}
+.daftar-produk img{
+    width: 100%;
+    height: 175px;
+    display: block;
+	margin-bottom: 5px
+}
+.daftar-produk h4{
+    color: #FF1493;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.daftar-produk h5{
+	color: #FF1493;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.button{
+    text-decoration: none;
+    border-radius: 7px;
+    padding: 7px;
+    display: block;
+    float: left;
+    width: 45%;
+    margin: 4px;
+    text-align: center;
+    color: white;
+}
+.button-detail{
+    background-color: black	;
+}
+.button-beli{
+    background-color: #FF1493;
+}
+/*top seller*/
+.top-seller{
+	border: 30px solid #fff;
+    padding: 100px;
+    float: left;
+    width: 150px;
+    margin: 10px;
+}
+.top-seller img{
+	width: 500px;
+    height: 500px;
+	margin-bottom: 5px
+}
+.button{
+    text-decoration: none;
+    border-radius: 7px;
+    padding: 7px;
+    display: block;
+    float: left;
+    width: 60%;
+    margin: 5px;
+    text-align: center;
+	color: white;
+}
+.detail{
+	background-color: black;
+}
+.beli{
+	background-color: cornflowerblue;
+}
