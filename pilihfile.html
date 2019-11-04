@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<style media="screen">
+    #custom-button{
+        padding: 10px;
+        color:white;
+        background-color: #f6c6c6;
+        border: 1px solid #000;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #custom-button:hover{
+        background-color: #f6c6c6;
+    }
+    #custom-text{
+        margin-left: 10px;
+        font-family: sans-serif;
+        color: black;
+    }
+    #h1-upfile{
+        text-align: center;
+    }
+
+</style>
+<head>
+    <title>pilih file </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <input type="text" placeholder="Email" required>
+    <br>
+    <input type="text" placeholder="Password" required>
+    <br>
+    <input type="file" id="real-file" hidden />
+    <button type="button" id="custom-button">Choose A File</button>
+    <span id="custom-text">No File Chosen, yet</span>
+
+    <script type="text/javascript">
+        const realFileBtn = document.getElementById("real-file")
+        const customBtn = document.getElementById("custom-button")
+        const customTxt = document.getElementById("custom-text")
+
+        customBtn.addEventListener("click", function () {
+            realFileBtn.click();
+        })
+        realFileBtn.addEventListener("change", function () {
+            if (realFileBtn.value) {
+                customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+            } else {
+                customTxt.innerHTML = "No File Chosen, yet";
+            }
+        })
+    </script>
+</body>
+</html>
