@@ -1,54 +1,80 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>ALGO SHOP</title>
 	<link rel="shortcut icon" href="images/a2.png">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="ABOUT.css">
+	<script src="ABOUT.js"></script>
 </head>
+
 <body background="images/PINK.png">
 	<header>
 		<a href="index.html"><img src="images/back.png" width="50px" height="50px"></a>
+		<canvas id="box" width="1200" height="100">
+		</canvas>
+
+		<script type="text/javascript">
+			window.onload = function () {
+				var c = document.getElementById("box");
+				var ctx = c.getContext("2d");
+				x = 0;
+				y = 0;
+				animate();
+
+				function animate() {
+					ctx.clearRect(0, 0, c.width, c.height);
+					ctx.fillRect(x, 50, 50, 50);
+					x += 2;
+
+					setTimeout(animate, 50);
+				}
+			}
+		</script>
 	</header>
-    <h1 id="about" align="center">ABOUT
+	<marquee width="1200" height="50">ABOUT US</marquee>
+	<h1 id="about" align="center">ABOUT <br><br>
+		<img src="images/icons8-about-100.png" height="100px" align="center">
 	</h1>
 	<br>
-	<table width="500" align="center" border="0" cellpadding="0" cellspacing="0" height="500" </table>
-		<tr>
-		<td width="325px">
-        <img src="images/icons8-about-100.png" height="100px" align="right">
-			    <!-- Content -->
-			    <tr>
-			    <td colspan="2">
-			    <p id="p1" align = "center">
-						ALGO SHOP adalah sebuah onlie shop yang menyediakan berbagai
-                        jenis kecamata stylist dari berbagai merk. Tujuan kami 
-                        adalah kenyamanan pelanggan. Hope you enjoy it :) </p>
-                <br>
-                </p>
-				</td>
-					<td height="0px"  colspan="0"></td>
-							<!-- Footer -->
-							<tr>
-								<td>
-									Contact Us :<br>
-                                    <img src="images/icons8-instagram-100 (1).png" width="35px" <p> @algo.shop </p>
-                                    <br>
-                                    <img src="images/icons8-facebook-240.png" width="35px" <p> algo shop </p>
-								</td>
-								<td>
-									<br>
-                                    <img src="images/icons8-website-96.png" width="35px" <p>www.algoshop.com </p>
-                                    <br>
-                                    <img src="images/icons8-call-24.png" width="35px" <p>0333(62314)13</p>
-								</td>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</td>
-			</tr>
-		</tboody>
-	</table>
-</font>
+	<!-- Content -->
+	<tr>
+		<p id="p1" align="center">
+			ALGO SHOP adalah sebuah onlie shop yang menyediakan berbagai
+			jenis kecamata stylist dari berbagai merk.<br>dimana terdapat beberapa pilihan
+			kategori yang dapat anda pilih <br> Tujuan kami
+			adalah kenyamanan pelanggan. Hope you enjoy it :) </p>
+		<br>
+		<img id="contact" src="images/cu.jpg" align="center">
+		</p>
+		</td>
+		<td height="0px" colspan="0">
+		</td>
+	<tr>
+		<!--modal section-->
+		<div class="bg-modal">
+			<div class="modal-content">
+				<div class="close">+</div>
+				<img src="images/cu.jpg" alt="">
+				<form action="">
+					<input type="text" placeholder="WEB : www.algoshop.com">
+					<input type="text" placeholder="INSTAGRAM : @algoshop">
+					<input type="text" placeholder="CONTACT PERSON : 0724672">
+					<input type="text" placeholder="EMAIL : algoshop@gmail.com">
+				</form>
+			</div>
+			<script>
+				document.getElementById('contact').addEventListener('click', function () {
+					document.querySelector('.bg-modal').style.display = 'flex';
+				});
+				document.querySelector('.close').addEventListener('click', function () {
+					document.querySelector('.bg-modal').style.display = 'none';
+				});
+			</script>
+		</div>
+
+
 </body>
+
 </html>
