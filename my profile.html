@@ -1,21 +1,72 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>My Profile</title>
 </head>
+
 <body background="images/kacamata.jpg" background-size="cover">
-    <header>
+	<header>
 		<a href="index.html"><img src="images/back.png" width="50px" height="50px"></a>
 	</header>
 	<form class="form" name="form" onsubmit="validation();">
 		<div class="registeratas">My Profile</div>
 		<div class="isiregister">
-			<input type="text" placeholder="Nama : Aulia Reta ">
-			<input type="text" placeholder="Last Name : Faulina">
-			<input type="text" placeholder="Email : auliareta5@gmail.com">
-			<input type="text" placeholder="Address : Jl.Jawa 2">
-			<input type="number" placeholder="Phone Number : 08216471343">
+			<input placeholder="Nama : Aulia Reta ">
+			<input placeholder="Last Name : Faulina">
+			<input placeholder="Email : auliareta5@gmail.com">
+			<input placeholder="Address : Jl.Jawa 2">
+			<input placeholder="Phone Number : 08216471343">
 		</div>
+		<div class="image-center">
+			<img id="image_upload_preview" src="http://placehold.it/100x100" alt="your image" style="width: 100px;" />
+		</div>
+		<div class="input-hidden">
+			<input type='file' id="inputFile" />
+		</div>
+	</form>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		function alertAction() {
+			alert("Silahkan Login Atau Sign Up Terlebih Dahulu");
+		}
+
+
+		$('#buttonn').click(function () {
+			$('.bg-modal').addClass('showModal');
+		});
+		$('.close').click(function () {
+			$('.bg-modal').addClass('hideModal');
+			$('.bg-modal').removeClass('showModal');
+		});
+
+
+		function readURL(input) {
+			if (input.files && input.files[0]) {
+				var reader = new FileReader();
+
+				reader.onload = function (e) {
+					$('#image_upload_preview').attr('src', e.target.result);
+				}
+
+				reader.readAsDataURL(input.files[0]);
+			}
+		}
+
+		$("#inputFile").change(function () {
+			readURL(this);
+			$('.input-hidden').css({
+				'opacity': '0'
+			});
+		});
+	</script>
+
+	<script>
+		$('#image_upload_preview').click(function () {
+			$('#inputFile').click();
+		});
+	</script>
 </body>
+
 </html>
