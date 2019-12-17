@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ALGOSHOP</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="media.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<div id="sub-header">
+				<div class="container">
+					<p>Online Shop yang menyediakan berbagai jenis Kacamata</p>
+					<a href="login.html">Login</a>
+					<a href="register.html">Register</a>
+					<a href="ABOUT.html">About</a>
+				</div>
+			</div>
+			<!--==main header==-->
+			<div id="main-header">
+				<!--logo-->
+				<div id="logo">
+					<span id="ist">ALGO</span><span id="iist">Shop.com</span>
+				</div>
+				<!--search box-->
+				<div id="search">
+					<form action="">
+						<input class="search-area" type="text" name="text" placeholder="Cari Kacamatamu Disini">
+						<input class="search-btn" type="submit" name="submit" value="SEARCH">
+					</form>
+				</div>
+				<!--user menu-->
+				<div id="user-menu">
+					<li><a href="#"></a>Cart</li>
+					<li><a href="#"></a>Download App</li>
+				</div>
+			</div>
+			<!--==navigation bar==-->
+			<div id="navbar">
+				<nav>
+					<a href="#">Home</a>
+					<a href="#">Top Sellers</a>
+					<a href="#">Top Search</a>
+					<a href="#">New Product</a>
+				</nav>
+			</div>
+			<!--==Product==-->
+			<div id="heading-block">
+				<h2>Produk Kacamata</h2>
+			</div>
+			<div id="produk" class="prod-container">
+				<div class="prod-box">
+					<img src="images/kacamatalaki1.jpg" alt="man glasses">
+					<div class="prod-trans">
+					<div class="prod-det">
+						<p>Kacamata Laki-Laki</p>
+						<p style="color: #fff;font-weight: bold;">Harga : Rp 80.000/pcs</p>
+						<input type="button" value="Beli" name="Add to Cart">
+					</div>
+				</div>
+				</div>
+			</div>
+			<button id="btn">More</button>
+		</div>
+
+	</div>
+		<!--footer-->
+		<div id="footer">
+			<div class="container">
+				<div class="footer-sub">
+					<h2> Project HTML </h2>
+					<p>Copyright 2019 by Kelompok 1
+					Aulia Reta , Fahmi Chairuddin
+					Perancangan Website Kelas A</p>
+				</div>
+				<div class="footer-sub-2">
+					<center>
+					<h2> Important Links </h2>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Top Sellers</a></li>
+						<li><a href="#">Top Search</a></li>
+						<li><a href="#">New Products</a></li>
+					</ul>
+					</center>
+				</div>
+				<div class="footer-sub-3">
+					<center>
+					<h2> Social Links </h2>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Instagram</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Google+</a></li>
+					</ul>
+					</center>
+				</div>
+				<div class="footer-sub-4"></div>
+			</div>
+		</div>
+	<script
+  		src="https://code.jquery.com/jquery-2.2.4.js"
+  		integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  		crossorigin="anonymous">
+  	</script>
+  	<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+  	<script type="text/javascript" src="js/my.js"></script>
+  	<script type="text/javascript">
+  		$("#btn").click(function () {
+            var url = "https://vayneirisu.github.io/product.json"
+            $.ajax({
+                url: url,
+                type: 'GET',
+                dataType: 'json'
+            })
+            .done(function (prod) {
+                console.log("sukses");
+
+                var data = "";
+                $.each(prod, function (val) {
+                    data += `
+                        <div class="prod-box">
+					<img src="https://vayneirisu.github.io/images/kacamatalaki2.jpg" alt="man glasses">
+					<div class="prod-trans">
+					<div class="prod-det">
+						<p>Kacamata 3D</p>
+						<p style="color: #fff;font-weight: bold;">Harga : Rp. 95000/pcs</p>
+						<input type="button" value="Beli" name="Add to Cart">
+					</div>
+				</div>
+				</div>
+                    `;  
+                });
+                $("#produk").append(data);
+            })
+            .fail(function () {
+                console.log("error");
+            })
+        });
+  	</script>
+</body>
+</html>
